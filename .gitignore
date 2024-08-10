@@ -161,4 +161,8 @@ cython_debug/
 
 # Datasets
 data/
+models/
 env
+*ckpt*
+*test*
+*.zip
