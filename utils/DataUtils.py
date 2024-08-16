@@ -74,7 +74,6 @@ class DataUtils:
         for t in timestamps:
             time_from, time_to = t[0], t[1]
 
-            # ticker = 'MSFT'
             url = f'https://www.alphavantage.co/query?function=NEWS_SENTIMENT&time_from={time_from}&time_to={time_to}&limit=1000&apikey={api_key}'
             r = requests.get(url, headers={
                 'User-Agent': "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36",
@@ -96,6 +95,14 @@ class DataUtils:
         txt = [token.lemma_ for token in doc]
         return txt[:max_words]
 
+    """
+    Cleans and tokenizes a list of documents 
+    Parameters:
+        data: a list of strings to be tokenized
+        max_words: maximum number of words to be considered
+        batch_size: batch size for parallel operation
+    returns a list of documents tokenizied
+    """
     def clean_data(self, data, max_words=64, batch_size=5000):
         # Preprocess a list of documents
         nlp = sp.load('en_core_web_sm', disable=['ner', 'parser'])  # NER not required for this task
