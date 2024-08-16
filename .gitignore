@@ -163,6 +163,7 @@ cython_debug/
 *data*/
 models/
 env
-*ckpt*
+*ckpt*/
+*chkpt*/
 *test*
 *.zip
