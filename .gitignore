@@ -160,9 +160,10 @@ cython_debug/
 #.idea/
 
 # Datasets
-data/
+*data*/
 models/
 env
-*ckpt*
+*ckpt*/
+*chkpt*/
 *test*
 *.zip
