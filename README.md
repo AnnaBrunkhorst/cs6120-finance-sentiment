@@ -1,9 +1,9 @@
 # CS6120: Sentiment Analysis in Finance by TEAM103
 
 ### Team:
-Ashish Magadum
-Anna Brunkhorst
-Nader Lobandi
+- Ashish Magadum
+- Anna Brunkhorst
+- Nader Lobandi
 
 ### Dependencies
 To run the setup, the following packages need to installed:
